@@ -30,16 +30,16 @@
             </Grid.RenderTransform>
             <Label Content="INFORMAÇÕES" FontSize="20" FontWeight="Bold" Margin="0,0,-50,0"/>
             <Label Content="Nome" FontSize="20" HorizontalAlignment="Left" Margin="15,40,0,0" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox TextWrapping="Wrap" VerticalAlignment="Top"  Margin="15,97,479,0" />
+            <TextBox x:Name="txtNomeFantasia" TextWrapping="Wrap" VerticalAlignment="Top"  Margin="15,97,479,0" />
 
             <Label Content="CNPJ" FontSize="20" HorizontalAlignment="Left" Margin="23,140,0,0" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"  Margin="22,197,0,0" />
+            <TextBox x:Name="txtCNPJ" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"  Margin="22,197,0,0" TextChanged="TextBox_TextChanged" />
 
             <Label Content="Razão Social" FontSize="20" Margin="441,41,90,0" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox HorizontalAlignment="Left" Margin="446,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Height="22"/>
+            <TextBox x:Name="txtRazaoSocial" HorizontalAlignment="Left" Margin="446,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310" Height="22"/>
 
             <Label Content="Inscrição Estadual" FontSize="20" Margin="443,143,88,0" Height="44" VerticalAlignment="Top" FontWeight="Bold"/>
-            <TextBox HorizontalAlignment="Left" Margin="449,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" Height="22"/>
+            <TextBox x:Name="txtInscricao" HorizontalAlignment="Left" Margin="449,193,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="317" Height="22"/>
         </Grid>
 
         <Grid Grid.Row="2">
@@ -53,32 +53,32 @@
 
                 <Label Content="Tipo:" FontSize="15"  Height="44" Margin="20,-20,330,0"/>
 
-                <RadioButton Content="Privada" FontSize="15" Width="100" Margin="-200,-20,0,0"/>
-                <RadioButton Content="Pública" FontSize="15" Width="100" Margin="-195,2,0,0"/>
+                <RadioButton x:Name="btPrivada" Content="Privada" FontSize="15" Width="100" Margin="-200,-20,0,0"/>
+                <RadioButton x:Name="btPublica" Content="Pública" FontSize="15" Width="100" Margin="-195,2,0,0"/>
                 
                 <Label Content="Data Criação:" FontSize="15" Height="44" Margin="20,10,250,0"/>
-                <DatePicker Margin="0,-2,0,0" Width="300"/>
+                <DatePicker x:Name="DTcriacao" Margin="0,-2,0,0" Width="300"/>
 
                 <Label Content="Responsável:" FontSize="15" Height="31" Margin="20,10,250,0"/>
-                <TextBox TextWrapping="Wrap" Width="204" Margin="30,-22,0,0"/>
+                <TextBox x:Name="txtREsponsavel" TextWrapping="Wrap" Width="204" Margin="30,-22,0,0"/>
 
                 <Label Content="Nome:" FontSize="15" Height="30" Margin="20,0,330,0"/>
-                <TextBox TextWrapping="Wrap" Width="238" Margin="-2,-19,0,0"/>
+                <TextBox x:Name="txtnomeIp" TextWrapping="Wrap" Width="238" Margin="-2,-19,0,0"/>
                
             </StackPanel>
 
             <StackPanel Grid.Column="1" >
                 <Label Content="Telefone:" FontSize="15"  Height="30" Margin="-300,-1,0,0" Width="70"/>
-                <TextBox TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
+                <TextBox x:Name="txtTelefone" TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
 
                 <Label Content="Rua:" FontSize="15" Height="30" Margin="-300,0,0,0" Width="58"/>
-                <TextBox TextWrapping="Wrap" Width="213" Margin="-160,0,0,0"/>
+                <TextBox x:Name="txtRua" TextWrapping="Wrap" Width="213" Margin="-160,0,0,0"/>
 
                 <Label Content="Bairro:" FontSize="15" Height="30" Margin="-300,0,0,0" Width="70"/>
-                <TextBox TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
+                <TextBox x:Name="txtBairro" TextWrapping="Wrap" Width="120" Margin="-250,0,0,0"/>
 
                 <Label Content="CEP:" FontSize="15" Height="30" Margin="-300,0,0,0" Width="60"/>
-                <TextBox TextWrapping="Wrap" Width="120" Margin="-250,5,0,0" RenderTransformOrigin="0.488,2.736"/>
+                <TextBox x:Name="txtCEP" TextWrapping="Wrap" Width="120" Margin="-250,5,0,0" RenderTransformOrigin="0.488,2.736"/>
 
                 <Label Content="Email:" FontSize="15" Height="30"  Margin="0,-360,0,0" Width="60"/>
                 <TextBox TextWrapping="Wrap" Width="184" Margin="100,-320,0,0" Height="19"/>
@@ -122,6 +122,6 @@
             </StackPanel>
             <Grid Grid.Row="3"/>
         </Grid>
-        <Button Content="Salvar" FontSize="20" FontWeight="Bold" Background="AliceBlue" Foreground="Black" Margin="382,15,382,15" Grid.Row="3"/>
+        <Button Content="Salvar" FontSize="20" FontWeight="Bold" Background="AliceBlue" Foreground="Black" Margin="382,15,382,15" Grid.Row="3" Click="Button_Click"/>
     </Grid>
 </Window>
