@@ -1,0 +1,56 @@
+﻿<Window x:Class="System_Escola.Views.ListarEscola"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:System_Escola.Views"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Title="ListarEscola" Height="450" Width="800"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4"/>
+            <RowDefinition Height="37"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Grid.Row="1">
+            <TextBlock
+                       Background="#FF43576F"
+                      
+                       Padding="10" FontSize="18"><Run Language="pt-br" Text="Consultar "/><Run Text="Escola"/></TextBlock>
+        </StackPanel>
+
+        <DataGrid Grid.Row="2" Margin="5,5,5,5" x:Name="dataGrid" IsReadOnly="true"
+                      AutoGenerateColumns="False" AlternatingRowBackground="#FFE5E5E5" AlternationCount="2" Background="#FF677F9C">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="nome" Binding="{Binding Nome}"/>
+                <DataGridTextColumn Header="tipo" Binding="{Binding Tipo}"/>
+                <DataGridTextColumn Header="CNPJ" Binding="{Binding Cnpj}"/>
+                <DataGridTextColumn Header="telefone" Binding="{Binding Telefone_esc}"/>
+                <DataGridTextColumn Header="CEP" Binding="{Binding Cep}"/>
+
+                <DataGridTemplateColumn Header="Ações">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Style="{StaticResource MaterialDesignIconForegroundButton}" 
+                                        Content="{materialDesign:PackIcon Eye}"
+                                        ToolTip="Visualizar Registro" Margin="0 0 5 0" Click="Button_Update_Click" />
+                                <Button Style="{StaticResource MaterialDesignIconForegroundButton}" 
+                                        Content="{materialDesign:PackIcon Delete}"
+                                        ToolTip="Excluir Registro" Click="Button_Delete_Click" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

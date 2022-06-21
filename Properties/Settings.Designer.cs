@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShoolSystemJD.Properties
+namespace System_Escola.Properties
 {
 
 

@@ -12,8 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System_Escola.Views;
 
-namespace ShoolSystemJD
+namespace System_Escola
 {
     /// <summary>
     /// Interação lógica para MainWindow.xam
@@ -23,6 +24,42 @@ namespace ShoolSystemJD
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Cadastro cha = new Cadastro();
+            cha.ShowDialog();
+        }
+
+
+        private void Button_listar(object sender, RoutedEventArgs e)
+        {
+            ListaCurso cha = new ListaCurso();
+            cha.ShowDialog();
+        }
+
+        private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            CadastroCurso cha = new CadastroCurso();
+            cha.ShowDialog();
+        }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            ListaCurso cha = new ListaCurso();
+            cha.ShowDialog();
+        }
+
+        private void Button_Click8(object sender, RoutedEventArgs e)
+        {
+            ListarEscola cha = new ListarEscola();
+            cha.ShowDialog();
         }
     }
 }
